@@ -1,16 +1,22 @@
 from os import getenv
 from phi.playground import Playground
 
-from agents.example import get_example_agent
+from agents.agent_leader import get_agent_leader
+from agents.web_searcher import get_web_searcher
+from agents.lightrag_restaurant_searcher import get_lightrag_restaurant_searcher
+from agents.crawl4ai import get_crawl4ai_searcher
 
 ######################################################
 ## Router for the agent playground
 ######################################################
 
-example_agent = get_example_agent(debug_mode=True)
+agent_leader = get_agent_leader(debug_mode=True)
+web_searcher = get_web_searcher(debug_mode=True)
+lightrag_restaurant_searcher = get_lightrag_restaurant_searcher(debug_mode=True)
+crawl4ai_searcher = get_crawl4ai_searcher(debug_mode=True)
 
 # Create a playground instance
-playground = Playground(agents=[example_agent])
+playground = Playground(agents=[agent_leader, web_searcher, lightrag_restaurant_searcher, crawl4ai_searcher])
 
 # Log the playground endpoint with phidata.app
 if getenv("RUNTIME_ENV") == "dev":
