@@ -1,0 +1,946 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d6" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d5" for="edge" attr.name="keywords" attr.type="string" />
+  <key id="d4" for="edge" attr.name="description" attr.type="string" />
+  <key id="d3" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="entity_type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="&quot;LE COQUEMAR&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Cuisine traditionnelle proposée dans une salle claire et élégante avec des murs de pierres ornés de peintures."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;3091293945615310311&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Le Coquemar."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;CAFÉ LISBOA&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant coloré de style décontracté avec terrasse, servant petites assiettes et tartes à la crème portugaises."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;16204433116771456015&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Café Lisboa."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;RESTAURANT GASTRONOMIQUE CHRISTIAN TETEDOIE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant gastronomique servant des plats locaux revisités accompagnés de vin, avec terrasse et vue sur la ville."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;3359024717080459809&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Gastronomique Christian Tetedoie."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;FISTON - CUISINE FRANÇAISE (RUE MERCIÈRE)&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Ce restaurant avec mezzanine propose une cuisine française fine et traditionnelle en salle et en terrasse."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;16465127714447611459&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Fiston."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LES ADRETS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Plats lyonnais typiques de saison et menus fixes de trois plats dans une salle dotée de poutres en bois et de colonnes en pierre."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;13294163500777077759&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Les Adrets."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LA SOMMELIERE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Ce restaurant à l'élégance moderne propose une fine gastronomie française préparée par un chef japonais."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;14683541982190195403&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant La Sommeliere."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LE COMPTOIR D'AINAY&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Ce restaurant sobre aux banquettes brun chocolat propose une cuisine bistronomique et des spécialités de Lyon."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;1437845684736815039&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Le Comptoir d'Ainay."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;NEW DELHI RESTAURANT&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Plats indiens et pakistanais dans un restaurant au décor traditionnel ouvert 7j/7 avec vente à emporter."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;1447719762300645761&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant New Delhi."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;L'ACTEUR - BOUCHON LYONNAIS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant pittoresque avec des poutres et des pierres apparentes servant des spécialités locales dans une atmosphère décontractée."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;18208549716975737402&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant L'acteur."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;L'ALCHIMISTE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant cosy et rétro proposant des burgers gastronomiques copieux, des accompagnements, de la bière et des cocktails."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;2380433622698995537&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant l'Alchimiste."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LES CULOTTES LONGUES&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Cuisine lyonnaise rustique et menus fixes servis dans un agréable restaurant de style décontracté doté d'un escalier en colimaçon."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;12971004636650303258&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Les Culottes Longues."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;AUBERGE LE RABELAIS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant pittoresque simple avec menus de plats traditionnels tels que quenelles et andouillette."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;5897281399332057253&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Auberge Le Rabelais."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;CHABERT ET FILS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Mobilier de bistrot et carrelage au sol pour ce bouchon traditionnel qui offre une cuisine lyonnaise copieuse."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;3149364698644471828&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Chabert et Fils."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;MCDONALD'S&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Chaîne classique de restauration rapide établie de longue date connue pour ses burgers et ses frites."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;9099897965450292585&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant McDonald's."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;CHEZ M'MAN&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Ce restaurant propose une cuisine française régionale et classique dans une salle chaleureuse aux tons rouges."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;18071107802725433021&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Chez M'man."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;CHEZ MOUNIER&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Lieu animé avec des peintures murales insolites et une terrasse, servant des salades lyonnaises copieuses, des steaks et du poisson."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;14172405795022734505&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Chez Mounier."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;BIG FERNAND&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Pierres apparentes pour ce restaurant servant des burgers et des frites, le tout fait maison et à la commande."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;8301684038700470544&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Big Fernand."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LA NEF DES FOUS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Classique de la cuisine française dans une salle richement décorée avec objets rétro et fauteuils ouvragés."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;12278766416833476613&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant La Nef Des Fous."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LA CUISINERIE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant convivial à la décoration rétro ; cuisine française aux accents espagnols et spécialités lyonnaises."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;4008704294272377960&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant La Cuisinerie."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LE COMPTOIR DES MARRONNIERS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Cuisine traditionnelle proposée dans un restaurant à l'ambiance détendue doté de murs en pierres apparentes et d'une terrasse."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;3222543320679510596&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Le Comptoir des Marronniers."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;CINQ MAINS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Plats français aux accents internationaux et vins naturels dans un restaurant cosy avec des murs en pierres et une grande terrasse."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;3329254507949289111&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Cinq Mains."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;BOUCHON ROUGE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Soupe à l'oignon, saucisse briochée et autres spécialités lyonnaises servies dans un restaurant de cuisine maison chic et sobre."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;9044309182789010235&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Bouchon Rouge."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LE F2 RESTAURANT&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Brasserie contemporaine dotée de papier peint fleuri et de lustres servant une cuisine fusion et des tapas."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;16916275465928278642&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant LE F2 Restaurant."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;GARDEN BISTRO - RESTAURANT FRANÇAIS RUE MERCIÈRE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Bistrot tendance doté d'une terrasse et proposant des plats français traditionnels."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;14239462703269714949&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Garden Bistro."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;RESTAURANT CAFÉ DU SOLEIL&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant historique avec terrasse proposant des spécialités régionales traditionnelles."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;11257188732700067834&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Café du Soleil."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;SELCIUS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant méditerranéen avec terrasse en bord de rivière, proposant des mezze, et des plats de viande ou de fruits de mer."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;7918471434958890011&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Selcius."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;DOMAINE LYON SAINT JOSEPH&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Chambres conviviales dans hôtel congrès de style décontracté avec restaurant clair, parc et amphithéâtre."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;1391726322452515760&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Domaine Lyon Saint Joseph."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;CRESCENDO RESTAURANT&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Chaîne de restaurants en libre service au décor moderne avec buffet à volonté et plat du jour fait sur place."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;8224817319242224042&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Crescendo Restaurant."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;RESTAURANT LA CHIMÈRE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Spécialités françaises aux accents internationaux dans un lieu à l'atmosphère tamisée, avec des murs de pierre aux touches colorées."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;6539862525288045202&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant La Chimère."&lt;SEP&gt;"La Chimère est un restaurant avec un décor moderne et un buffet à volonté."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8&lt;SEP&gt;chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;BOUCHON LES LYONNAIS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Plats traditionnels et menus fixes proposés dans un cadre chaleureux avec cave à vin et terrasse."&lt;SEP&gt;"Plats traditionnels et menus typiques dans un restaurant qui préserve l'essence des bouchons lyonnais."&lt;SEP&gt;"Plats traditionnels et menus"</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8&lt;SEP&gt;chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;12794081567114408004&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Bouchon Les Lyonnais offre une atmosphère conviviale avec un cadre charmant."&lt;SEP&gt;"Identifiant unique pour le restaurant Bouchon Les Lyonnais."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8&lt;SEP&gt;chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;AUBERGE DE LA FERME&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant rustique offrant une cuisine régionale dans une ambiance chaleureuse."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;14567382901234567890&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Auberge De La Ferme."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LA PETITE VENISE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant charmant avec une cuisine française inventive et un service convivial."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;15725298765432109876&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant La Petite Venise."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LE RELAIS&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Établissement classique avec une belle carte de vins et une ambiance détendue."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;19876543210987654321&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Identifiant unique pour le restaurant Le Relais."</data>
+      <data key="d2">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </node>
+    <node id="&quot;LA CHIMÈRE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Spécialités françaises aux accents internationaux dans un lieu à l'atmosphère tamisée, avec des murs de pierre aux touches colorées."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;LE MERCIÈRE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Cuisine lyonnaise raffinée dans une salle à manger chaleureuse au charme d'époque ou dans une allée intérieure au plafond voûté."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;334717386464374466&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Le Mercière se distingue par son cadre élégant et sa cuisine raffinée."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;LE BŒUF D'ARGENT&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Plats français raffinés à la présentation soignée servis dans un charmant restaurant voûté à l'atmosphère décontractée."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;6488308336920850523&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Le Bœuf d'Argent est connu pour son atmosphère décontractée et ses plats de qualité."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;LE FRANÇOIS VILLON&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Des spécialités lyonnaises servies dans un cadre chaleureux et cosy, avec murs de pierres et fresques murales."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;17061261347078953678&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Le François Villon propose une expérience culinaire conviviale avec une touche artistique."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;BOUCHON TUPIN&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Cuisine locale classique servie dans un restaurant élégant à la décoration vintage."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;925268027415040726&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Bouchon Tupin est réputé pour son ambiance vintage et ses plats authentiques."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;BULLE - RESTAURANT DE FOURVIÈRE - GUY LASSAUSAIE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Mets raffinés de saison proposés dans un cadre élégant, ainsi que bar à cocktails avec terrasse et vue sur la ville."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;8696317789606149977&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Bulle offre une expérience gastronomique avec une vue impressionnante sur la ville."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;L'ESPACE BRASSERIE&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant sobre et élégant servant des mets traditionnels haut de gamme tels que foie gras et tartare accompagnés de vins."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;11832177470472336311&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"L'Espace Brasserie est un lieu de choix pour la cuisine traditionnelle haut de gamme."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;RESTAURANT LE VIEUX LYON&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant ancien et cosy avec terrasse proposant un menu régional et des vins locaux."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;4697641785302783156&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Le Vieux Lyon est apprécié pour son ambiance cosy et son menu traditionnel."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;LE PETIT GLOUTON&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Bistrot charmant et rétro doté d'une terrasse côté rue et proposant des plats locaux copieux et du vin."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;7551621730333897983&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Le Petit Glouton se spécialise dans les plats locaux dans un cadre rétro."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;LE LAURENCIN&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Cuisine lyonnaise traditionnelle dans un restaurant cosy avec murs en pierres apparentes et terrasse dans une ruelle pavée."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;6622807429299965614&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"Le Laurencin est typique de la cuisine régionale dans un cadre apaisant."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;LA PIAZZETTA&quot;">
+      <data key="d0">"RESTAURANT"</data>
+      <data key="d1">"Restaurant italien de style décontracté avec terrasse, servant planches de charcuterie et portions généreuses de pizza et de pâtes."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;7764700260837340345&quot;">
+      <data key="d0">"CID"</data>
+      <data key="d1">"La Piazzetta est connu pour son ambiance décontractée et ses portions généreuses."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;CHAÎNE DE RESTAURANTS EN LIBRE SERVICE&quot;">
+      <data key="d0">"CATEGORY"</data>
+      <data key="d1">"Chaîne de restaurants moderne avec buffet à volonté et plat du jour fait sur place."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;BUFFET À VOLONTÉ&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Le restaurant propose un buffet à volonté, offrant une grande variété de choix."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;PLAT DU JOUR FAIT SUR PLACE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Les plats du jour sont préparés sur place, garantissant de la fraîcheur."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;ATMOSPHÈRE TAMISÉE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"L'ambiance dans La Chimère est tamisée, créant une atmosphère agréable."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;CAVE À VIN&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Bouchon Les Lyonnais dispose d'une cave à vin, ajoutant à l'expérience culinaire."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;TERRASSE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Plusieurs restaurants, comme Le Vieux Lyon et Le Petit Glouton, offrent une terrasse pour les repas en extérieur."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;PLATS TRADITIONNELS&quot;">
+      <data key="d0">"CATEGORY"</data>
+      <data key="d1">"Les plats servis à Bouchon Les Lyonnais sont des exemplaires de la cuisine française traditionnelle."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;CUISINE LYONNAISE RAFFINÉE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Le Mercière est réputé pour sa cuisine lyonnaise raffinée."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;ATMOSPHÈRE DÉCONTRACTÉE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Le Bœuf d'Argent se distingue par son atmosphère décontractée."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;MURS DE PIERRE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Le François Villon propose un cadre chaleureux avec des murs de pierre."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;FRESQUES MURALES&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Le François Villon est embelli par des fresques murales."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;DÉCORATION VINTAGE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Bouchon Tupin est reconnu pour sa décoration vintage, ajoutant un charme particulier."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;BAR À COCKTAILS&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Bulle propose un bar à cocktails, offrant une expérience supplémentaire."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;TERRASSE AVEC VUE SUR LA VILLE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Bulle dispose d'une terrasse avec vue sur la ville, idéale pour les repas en plein air."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;FOIE GRAS&quot;">
+      <data key="d0">"CATEGORY"</data>
+      <data key="d1">"L'Espace Brasserie est connu pour ses plats traditionnels, y compris le foie gras."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;VIN&quot;">
+      <data key="d0">"CATEGORY"</data>
+      <data key="d1">"Les restaurants comme L'Espace Brasserie et Le Vieux Lyon proposent une sélection de grands vins."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;PLAIS LOCAUX COPIEUX&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Le Petit Glouton se spécialise dans des plats locaux copieux."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;MURS EN PIERRES APPARENTES&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Le Laurencin est caractérisé par ses murs en pierres apparentes."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;RUELLE PAVÉE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"Le Laurencin utilise l'attrait d'une ruelle pavée pour créer une atmosphère charmante."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;PLANCHES DE CHARCUTERIE&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"La Piazzetta sert des planches de charcuterie, ajoutant à son offre culinaire."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;PORTIONS GÉNÉREUSES DE PIZZA ET DE PÂTES&quot;">
+      <data key="d0">"POSITIVE_POINT"</data>
+      <data key="d1">"La Piazzetta est célèbre pour ses portions généreuses de pizza et de pâtes."</data>
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </node>
+    <node id="&quot;RESTAURANT&quot;">
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+      <data key="d1">"La Chimère est un restaurant moderne offrant des spécialités françaises et des plats à volonté."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <node id="&quot;LE VIEUX LYON&quot;">
+      <data key="d2">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+      <data key="d1">"Le Vieux Lyon et d'autres restaurants offrent la possibilité de dîner sur leur terrasse."</data>
+      <data key="d0">"UNKNOWN"</data>
+    </node>
+    <edge source="&quot;LE COQUEMAR&quot;" target="&quot;3091293945615310311&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Coquemar est le restaurant dont l'identifiant CID est 3091293945615310311."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;CAFÉ LISBOA&quot;" target="&quot;16204433116771456015&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Café Lisboa est le restaurant dont l'identifiant CID est 16204433116771456015."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;RESTAURANT GASTRONOMIQUE CHRISTIAN TETEDOIE&quot;" target="&quot;3359024717080459809&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Restaurant Gastronomique Christian Tetedoie a pour identifiant CID 3359024717080459809."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;FISTON - CUISINE FRANÇAISE (RUE MERCIÈRE)&quot;" target="&quot;16465127714447611459&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Fiston est le restaurant associé à l'identifiant CID 16465127714447611459."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LES ADRETS&quot;" target="&quot;13294163500777077759&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Les Adrets est référencé sous l'identifiant CID 13294163500777077759."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LA SOMMELIERE&quot;" target="&quot;14683541982190195403&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Sommeliere se trouve sous l'identifiant CID 14683541982190195403."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LE COMPTOIR D'AINAY&quot;" target="&quot;1437845684736815039&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Comptoir d'Ainay est lié à CID 1437845684736815039."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;NEW DELHI RESTAURANT&quot;" target="&quot;1447719762300645761&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"New Delhi Restaurant porte l'identifiant CID 1447719762300645761."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;L'ACTEUR - BOUCHON LYONNAIS&quot;" target="&quot;18208549716975737402&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"L'acteur est identifié par CID 18208549716975737402."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;L'ALCHIMISTE&quot;" target="&quot;2380433622698995537&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"L'alchimiste a pour identifiant CID 2380433622698995537."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LES CULOTTES LONGUES&quot;" target="&quot;12971004636650303258&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Les Culottes Longues sont associées à CID 12971004636650303258."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;AUBERGE LE RABELAIS&quot;" target="&quot;5897281399332057253&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Auberge Le Rabelais a le CID 5897281399332057253."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;CHABERT ET FILS&quot;" target="&quot;3149364698644471828&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Chabert et Fils sont référencés par CID 3149364698644471828."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;MCDONALD'S&quot;" target="&quot;9099897965450292585&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"McDonald's est associée à l'identifiant CID 9099897965450292585."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;CHEZ M'MAN&quot;" target="&quot;18071107802725433021&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Chez M'man est le restaurant identifié par CID 18071107802725433021."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;CHEZ MOUNIER&quot;" target="&quot;14172405795022734505&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Chez Mounier a le CID 14172405795022734505."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;BIG FERNAND&quot;" target="&quot;8301684038700470544&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Big Fernand est référencé par le CID 8301684038700470544."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LA NEF DES FOUS&quot;" target="&quot;12278766416833476613&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Nef Des Fous porte le CID 12278766416833476613."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LA CUISINERIE&quot;" target="&quot;4008704294272377960&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Cuisinerie est identifiée par le CID 4008704294272377960."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LE COMPTOIR DES MARRONNIERS&quot;" target="&quot;3222543320679510596&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Comptoir des Marronniers est associé à l'identifiant CID 3222543320679510596."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;CINQ MAINS&quot;" target="&quot;3329254507949289111&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Cinq Mains est le restaurant référencé par le CID 3329254507949289111."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;BOUCHON ROUGE&quot;" target="&quot;9044309182789010235&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Bouchon Rouge est lié à l'identifiant CID 9044309182789010235."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LE F2 RESTAURANT&quot;" target="&quot;16916275465928278642&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"LE F2 Restaurant porte l'identifiant CID 16916275465928278642."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;GARDEN BISTRO - RESTAURANT FRANÇAIS RUE MERCIÈRE&quot;" target="&quot;14239462703269714949&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Garden Bistro est identifié par le CID 14239462703269714949."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;RESTAURANT CAFÉ DU SOLEIL&quot;" target="&quot;11257188732700067834&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Café du Soleil est lié à l'identifiant CID 11257188732700067834."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;SELCIUS&quot;" target="&quot;7918471434958890011&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Selcius a pour identifiant CID 7918471434958890011."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;DOMAINE LYON SAINT JOSEPH&quot;" target="&quot;1391726322452515760&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Domaine Lyon Saint Joseph est associé à CID 1391726322452515760."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;CRESCENDO RESTAURANT&quot;" target="&quot;8224817319242224042&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Crescendo Restaurant porte l'identifiant CID 8224817319242224042."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;RESTAURANT LA CHIMÈRE&quot;" target="&quot;6539862525288045202&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Restaurant La Chimère est identifié par le CID 6539862525288045202."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;BOUCHON LES LYONNAIS&quot;" target="&quot;12794081567114408004&quot;">
+      <data key="d3">2.0</data>
+      <data key="d4">"Bouchon Les Lyonnais possède un CID mais non renseigné ici."&lt;SEP&gt;"Bouchon Les Lyonnais propose des plats typiques traditionnels irremplaçables dans la culture lyonnaise."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;BOUCHON LES LYONNAIS&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Bouchon Les Lyonnais offre une expérience traditionnelle avec des plats fixes dans un cadre chaleureux."</data>
+      <data key="d5">"cadre chaleureux, plats traditionnels"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;BOUCHON LES LYONNAIS&quot;" target="&quot;CAVE À VIN&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Bouchon Les Lyonnais enrichit son offre avec une cave à vin soigneusement sélectionnée."</data>
+      <data key="d5">"cave à vin, enrichissement"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;AUBERGE DE LA FERME&quot;" target="&quot;14567382901234567890&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Auberge De La Ferme est le restaurant identifié par CID 14567382901234567890, offrant une ambiance rustique."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LA PETITE VENISE&quot;" target="&quot;15725298765432109876&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Petite Venise est identifiée par l'identifiant CID 15725298765432109876, reconnue pour sa cuisine inventive."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LE RELAIS&quot;" target="&quot;19876543210987654321&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Relais se trouve sous l'identifiant CID 19876543210987654321, offrant une belle sélection de vins."</data>
+      <data key="d5">"restaurant identification"</data>
+      <data key="d6">chunk-d96cf9d60f63c69372adaaee21f10b7e</data>
+    </edge>
+    <edge source="&quot;LA CHIMÈRE&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Chimère est un restaurant moderne offrant des spécialités françaises et des plats à volonté."</data>
+      <data key="d5">"style moderne, cuisine française"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LA CHIMÈRE&quot;" target="&quot;BUFFET À VOLONTÉ&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Chimère propose un buffet à volonté, permettant de nombreux choix de cuisines."</data>
+      <data key="d5">"buffet à volonté, choix varié"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LA CHIMÈRE&quot;" target="&quot;PLAT DU JOUR FAIT SUR PLACE&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"À La Chimère, le plat du jour est préparé sur place et garanti frais."</data>
+      <data key="d5">"frais, préparation sur place"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE MERCIÈRE&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Mercière est renommé pour sa cuisine lyonnaise raffinée dans un cadre charmant avec une atmosphère chaleureuse."</data>
+      <data key="d5">"cuisine lyonnaise, charme"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE MERCIÈRE&quot;" target="&quot;CUISINE LYONNAISE RAFFINÉE&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Mercière est mis en avant pour ses plats raffinés, caractérisés par la cuisine lyonnaise."</data>
+      <data key="d5">"cuisine lyonnaise, plats raffinés"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE BŒUF D'ARGENT&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Bœuf d'Argent propose des plats raffinés dans un cadre décontracté."</data>
+      <data key="d5">"plais de qualité, ambiance décontractée"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE BŒUF D'ARGENT&quot;" target="&quot;ATMOSPHÈRE DÉCONTRACTÉE&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"L'atmosphère décontractée de Le Bœuf d'Argent permet aux clients de se sentir à l'aise."</data>
+      <data key="d5">"ambiance relaxante, accueil"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE FRANÇOIS VILLON&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le François Villon sert des spécialités dans un cadre artistique et cosy."</data>
+      <data key="d5">"ambiance artistique, spécialités lyonnaises"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE FRANÇOIS VILLON&quot;" target="&quot;MURS DE PIERRE&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Les murs de pierre dans Le François Villon ajoutent à son ambiance chaleureuse."</data>
+      <data key="d5">"ambiance chaleureuse, murs de pierre"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE FRANÇOIS VILLON&quot;" target="&quot;FRESQUES MURALES&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Les fresques murales apportent un attrait unique à l'expérience culinaire au François Villon."</data>
+      <data key="d5">"attrait artistique, ambiance"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;BOUCHON TUPIN&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Bouchon Tupin est reconnu pour sa cuisine locale classique dans une décoration vintage."</data>
+      <data key="d5">"cuisine locale, ambiance vintage"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;BOUCHON TUPIN&quot;" target="&quot;DÉCORATION VINTAGE&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La décoration vintage à Bouchon Tupin lui confère une identité nostalgique."</data>
+      <data key="d5">"nostalgie, décoration"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;BULLE - RESTAURANT DE FOURVIÈRE - GUY LASSAUSAIE&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Bulle offre une expérience gastronomique complète avec des mets raffinés et une vue panoramique."</data>
+      <data key="d5">"expérience gastronomique, vue sur la ville"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;BULLE - RESTAURANT DE FOURVIÈRE - GUY LASSAUSAIE&quot;" target="&quot;BAR À COCKTAILS&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Bulle offre une sélection de cocktails dans son bar à cocktails."</data>
+      <data key="d5">"bar à cocktails, choix"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;BULLE - RESTAURANT DE FOURVIÈRE - GUY LASSAUSAIE&quot;" target="&quot;TERRASSE AVEC VUE SUR LA VILLE&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Bulle propose des repas avec une vue imprenable sur la ville depuis sa terrasse."</data>
+      <data key="d5">"vue, expérience culinaire"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;L'ESPACE BRASSERIE&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"L'Espace Brasserie est un choix haut de gamme pour la cuisine traditionnelle."</data>
+      <data key="d5">"haute cuisine, tradition"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;L'ESPACE BRASSERIE&quot;" target="&quot;FOIE GRAS&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"L'Espace Brasserie est connu pour servir hautement reconnu des plats comme le foie gras."</data>
+      <data key="d5">"gastronomie, qualité"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;L'ESPACE BRASSERIE&quot;" target="&quot;VIN&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"L'Espace Brasserie propose une excellente sélection de vins pour accompagner ses plats."</data>
+      <data key="d5">"sélection de vin, accompagnement"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;RESTAURANT LE VIEUX LYON&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Vieux Lyon est apprécié pour son menu régional et son ambiance cosy."</data>
+      <data key="d5">"menu régional, ambiance cosy"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE PETIT GLOUTON&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Petit Glouton offre des plats locaux dans un cadre charmant et rétro."</data>
+      <data key="d5">"plats locaux, ambiance rétro"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE PETIT GLOUTON&quot;" target="&quot;PLAIS LOCAUX COPIEUX&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Petit Glouton est dédié à servir des plats locaux copieux, attirant les gourmets."</data>
+      <data key="d5">"plats copieux, local"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE LAURENCIN&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Laurencin est typique de la cuisine lyonnaise dans un cadre apaisant."</data>
+      <data key="d5">"cuisine lyonnaise, cadre apaisant"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE LAURENCIN&quot;" target="&quot;MURS EN PIERRES APPARENTES&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Les murs en pierres apparentes au Laurencin accentuent son ambiance typiquement lyonnaise."</data>
+      <data key="d5">"ambiance typiquement lyonnaise, charme"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LE LAURENCIN&quot;" target="&quot;RUELLE PAVÉE&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Laurencin est situé dans une ruelle pavée, ajoutant au charme de l'endroit."</data>
+      <data key="d5">"localisation, charme"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LA PIAZZETTA&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Piazzetta est un restaurant italien décontracté connu pour ses portions généreuses."</data>
+      <data key="d5">"cuisine italienne, portions généreuses"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LA PIAZZETTA&quot;" target="&quot;PLANCHES DE CHARCUTERIE&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Piazzetta met en avant ses planches de charcuterie comme une amusement culinaire."</data>
+      <data key="d5">"charcuterie, une offre culinaire"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;LA PIAZZETTA&quot;" target="&quot;PORTIONS GÉNÉREUSES DE PIZZA ET DE PÂTES&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Piazzetta est bien connue pour ses portions généreuses de pizza et de pâtes."</data>
+      <data key="d5">"ampleur, cuisine italienne"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;CHAÎNE DE RESTAURANTS EN LIBRE SERVICE&quot;" target="&quot;RESTAURANT&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"La Chaîne de restaurants en libre service offre une variété à ses clients avec un buffet à volonté."</data>
+      <data key="d5">"buffet à volonté, variété"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+    <edge source="&quot;TERRASSE&quot;" target="&quot;LE VIEUX LYON&quot;">
+      <data key="d3">1.0</data>
+      <data key="d4">"Le Vieux Lyon et d'autres restaurants offrent la possibilité de dîner sur leur terrasse."</data>
+      <data key="d5">"dîner en extérieur, terrasse"</data>
+      <data key="d6">chunk-3f86c4ee520d42bd10d938ea9c39d7f8</data>
+    </edge>
+  </graph>
+</graphml>
