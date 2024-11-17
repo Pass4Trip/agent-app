@@ -2,6 +2,7 @@ from typing import Optional
 
 from phi.agent import Agent
 from phi.model.openai import OpenAIChat
+from phi.model.ollama import Ollama
 
 from phi.knowledge.agent import AgentKnowledge
 from phi.storage.agent.postgres import PgAgentStorage
@@ -56,11 +57,7 @@ def get_lightrag_restaurant_searcher(
         session_id=session_id,
         user_id=user_id,
         # The model to use for the agent
-        model=OpenAIChat(
-            id=model_id or agent_settings.gpt_4,
-            max_tokens=agent_settings.default_max_completion_tokens,
-            temperature=agent_settings.default_temperature,
-        ),
+        model=Ollama(id="llama3.2", host="http://192.168.1.75:11434"),
         # model=Ollama(id="qwen2.5m:latest"),
         # Tools available to the agent
         tools=[lightrag_query],
@@ -80,7 +77,7 @@ def get_lightrag_restaurant_searcher(
         # Store agent sessions in the database
         storage=lightRAG_agent_storage,
         # Enable read the chat history from the database
-        read_chat_history=True,
+        #read_chat_history=True,
         # Store knowledge in a vector database
         #knowledge=lightRAG_agent_knowledge,
         # Enable searching the knowledge base

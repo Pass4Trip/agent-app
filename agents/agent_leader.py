@@ -26,7 +26,7 @@ agent_leader_knowledge = AgentKnowledge(vector_db=PgVector(table_name="agent_lea
 
 from agents.lightrag_restaurant_searcher import get_lightrag_restaurant_searcher
 from agents.web_searcher import get_web_searcher
-from agents.crawl4ai import get_crawl4ai_searcher
+
 
 
 
@@ -43,12 +43,9 @@ def get_agent_leader(
         session_id=session_id,
         user_id=user_id,
         # The model to use for the agent
-        model=OpenAIChat(
-            id=model_id or agent_settings.gpt_4,
-            max_tokens=agent_settings.default_max_completion_tokens,
-            temperature=agent_settings.default_temperature,
-        ),
-        team=[get_lightrag_restaurant_searcher(), get_web_searcher(), get_crawl4ai_searcher()],
+        model=Ollama(id="llama3.2", host="http://192.168.1.75:11434"),
+        #team=[get_lightrag_restaurant_searcher(), get_web_searcher()],
+        team=[get_web_searcher()],
         description="Tu es le Team Leader d'une team d'agent pour répondre aux demandes de l'utilisateur.",
         instructions=[
             "Etape 1 : Analyser la demande de l'utilisateur.\n",
@@ -67,13 +64,13 @@ def get_agent_leader(
         # Format responses as markdown
         markdown=True,
         # Show tool calls in the response
-        show_tool_calls=True,
+        #show_tool_calls=True,
         # Add the current date and time to the instructions
         add_datetime_to_instructions=True,
         # Store agent sessions in the database
         storage=agent_leader_storage,
         # Enable read the chat history from the database
-        read_chat_history=True,
+        #read_chat_history=True,
         # Store knowledge in a vector database
         knowledge=agent_leader_knowledge,
         # Enable searching the knowledge base

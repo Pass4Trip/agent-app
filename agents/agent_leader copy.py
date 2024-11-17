@@ -58,11 +58,7 @@ def get_rag_restaurant_searcher(
         session_id=session_id,
         user_id=user_id,
         # The model to use for the agent
-        model=OpenAIChat(
-            id=model_id or agent_settings.gpt_4,
-            max_tokens=agent_settings.default_max_completion_tokens,
-            temperature=agent_settings.default_temperature,
-        ),
+        model=Ollama(id="llama3.2"),
         # model=Ollama(id="qwen2.5m:latest"),
         # Tools available to the agent
         tools=[rag_query],
@@ -106,11 +102,7 @@ def get_web_restaurant_searcher(
         session_id=session_id,
         user_id=user_id,
         # The model to use for the agent
-        model=OpenAIChat(
-            id=model_id or agent_settings.gpt_4,
-            max_tokens=agent_settings.default_max_completion_tokens,
-            temperature=agent_settings.default_temperature,
-        ),
+        model=Ollama(id="llama3.2"),
         role="Tu es un expert d'internet et tu donnera les informations pour répondre aux questions autres que les restaurants à Lyon qui sont à la charge de RAG Restaurant Searcher.", 
         description="You are a Web Search Agent that has the special skill of searching the web for information and presenting the results in a structured manner for restaurants not located in Lyon.",
         instructions=[
@@ -156,17 +148,13 @@ def get_agent_leader(
         session_id=session_id,
         user_id=user_id,
         # The model to use for the agent
-        model=OpenAIChat(
-            id=model_id or agent_settings.gpt_4,
-            max_tokens=agent_settings.default_max_completion_tokens,
-            temperature=agent_settings.default_temperature,
-        ),
+        model=Ollama(id="llama3.2"),
         team=[get_rag_restaurant_searcher, get_rag_restaurant_searcher],
-        description="Tu es un expert AI et Leader d'un team d'agent pour répondre aux questions concernant les restaurants de lyon. Tu dispose de 2 experts pour t'aider à repondre aux questions de l'utilisateur : - rag_restaurant_searcher qui te donnera les informations pour répondre à des questions sur les restaurants à Lyon. - web_restaurant_searcher qui te permet de répondre aux questions autres que les restaurants de Lyon.",
+        description="Tu es un expert AI et Leader d'un team d'agent pour répondre aux questions concernant les restaurants de lyon. Tu dispose de 2 experts pour t'aider à repondre aux questions de l'utilisateur : - rag_restaurant_searcher qui te donnera les informations pour réponse à des questions sur les restaurants à Lyon. - web_restaurant_searcher qui te permet de répondre aux questions autres que les restaurants de Lyon.",
         instructions=[
             "First, demande à o'utilisateur ce qu'il veut savoir.",
             "Si la question porte sur une questions de restaurant à Lyon alors demande à RAG Restaurant Searcher de répondre à la question.",
-            "Si la question porte sur autre chose qu'une question de restaurant à Lyon alors demande à Web Searcherde répondre à la question.",
+            "Si la question porte sur autre chose qu'une question de restaurant à Lyon alors demande à Web Searcher de répondre à la question.",
         ],     
         # Format responses as markdown
         markdown=True,

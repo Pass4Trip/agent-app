@@ -30,11 +30,7 @@ def get_web_searcher(
         session_id=session_id,
         user_id=user_id,
         # The model to use for the agent
-        model=OpenAIChat(
-            id=model_id or agent_settings.gpt_4,
-            max_tokens=agent_settings.default_max_completion_tokens,
-            temperature=agent_settings.default_temperature,
-        ),
+        model=Ollama(id="llama3.2", host="http://192.168.1.75:11434"),
         #role="Tu es un expert d'internet et tu donnera les informations pour répondre aux questions autres que les restaurants à Lyon qui sont à la charge de RAG Restaurant Searcher.", 
         role="Tu es un agent d'une Team qui dispose des capacités à rechercher des informations sur le Web. Tu dois renvoyer tes résultats à Agent Leader",  
         instructions=[
@@ -50,7 +46,7 @@ def get_web_searcher(
         add_datetime_to_instructions=True,
         markdown=True,
         # Show tool calls in the response
-        show_tool_calls=True,
+        #show_tool_calls=True,
         # Add the current date and time to the instructions
         # Store agent sessions in the database
         storage=web_agent_storage,
