@@ -2,6 +2,21 @@
 
 Ce guide détaille les étapes pour déployer et mettre à jour l'application sur le VPS OVH.
 
+## Déploiement
+
+Pour déployer vos changements sur le VPS :
+
+```bash
+./scripts/deploy.sh
+```
+
+Ce script va :
+1. Vous demander un message de commit (optionnel)
+2. Si un message est fourni, commit et push vos changements sur Git
+3. Pull les changements sur le VPS
+4. Rebuilder l'image Docker
+5. Redéployer l'application sur Microk8s
+
 ## 1. Construction et Push des Images Docker
 
 Après modification du code sur votre Mac, reconstruire et pousser les images :
@@ -151,7 +166,74 @@ Configurées dans `secrets.yaml` :
 ## Agent App
 
 ## Description
-Ce projet est une application d'agent conversationnel qui permet d'interagir avec une API de chat via Python.
+Application de gestion d'agents conversationnels avec déploiement Kubernetes (Microk8s).
+
+## Structure du Projet
+```
+agent-app/
+├── agents/               # Agents conversationnels
+│   ├── __init__.py
+│   └── example.py       # Agent exemple
+├── scripts/             # Scripts d'automatisation
+│   ├── deploy.sh        # Script de déploiement complet
+│   └── sync.sh          # Synchronisation rapide des agents
+├── k8s/                 # Configurations Kubernetes
+└── Dockerfile           # Image de l'application
+```
+
+## Workflow de Développement
+
+### 1. Développement Local
+- Modification des agents dans le dossier `/agents`
+- Test local via `MyBoun_chat.py`
+
+### 2. Déploiement
+Deux options de déploiement sont disponibles :
+
+#### Option 1 : Synchronisation Rapide (Recommandée pour les mises à jour d'agents)
+```bash
+./scripts/sync.sh
+```
+- Synchronise uniquement le dossier `agents/`
+- Redémarre le pod API sans rebuild
+- Idéal pour les modifications d'agents
+
+#### Option 2 : Déploiement Complet
+```bash
+./scripts/deploy.sh
+```
+- Met à jour le code via Git
+- Reconstruit l'image Docker
+- Redéploie les pods Kubernetes
+- Nécessaire pour les changements de dépendances ou de configuration
+
+### 3. Vérification
+- Les scripts affichent automatiquement l'état des pods
+- Testez avec `MyBoun_chat.py`
+
+## Prérequis
+- SSH configuré pour le VPS
+- Accès à Microk8s sur le VPS
+- Docker pour les builds locaux (optionnel)
+
+## Commandes Utiles
+```bash
+# Test local
+python MyBoun_chat.py "Votre message"
+
+# Déploiement rapide (agents uniquement)
+./scripts/sync.sh
+
+# Déploiement complet
+./scripts/deploy.sh
+# Choisir option 2 pour rebuild complet
+```
+
+## Maintenance
+- Les logs des pods sont accessibles via :
+```bash
+microk8s kubectl logs -f deployment/api-deployment
+```
 
 ## Fichiers Principaux
 

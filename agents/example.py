@@ -6,6 +6,8 @@ from phi.knowledge.agent import AgentKnowledge
 from phi.storage.agent.postgres import PgAgentStorage
 from phi.tools.duckduckgo import DuckDuckGo
 from phi.vectordb.pgvector import PgVector, SearchType
+from phi.agent import AgentMemory
+from phi.memory.db.postgres import PgMemoryDb
 
 from agents.settings import agent_settings
 from db.session import db_url
@@ -16,12 +18,16 @@ example_agent_knowledge = AgentKnowledge(
 )
 
 
+# Version de l'agent
+AGENT_VERSION = "1.1.0"  # Ajout de la mémoire
+
 def get_example_agent(
     model_id: Optional[str] = None,
     user_id: Optional[str] = None,
     session_id: Optional[str] = None,
     debug_mode: bool = False,
 ) -> Agent:
+    print(f"Initializing Example Agent v{AGENT_VERSION}")
     return Agent(
         name="Example Agent",
         agent_id="example-agent",
@@ -71,4 +77,6 @@ def get_example_agent(
         monitoring=True,
         # Show debug logs
         debug_mode=debug_mode,
+        memory=AgentMemory(
+        db=PgMemoryDb(table_name="example_agent_memory", db_url=db_url), create_user_memories=True, create_session_summary=True),
     )

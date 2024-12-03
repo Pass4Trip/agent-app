@@ -22,8 +22,8 @@ Script Python pour envoyer un message à un chatbot via une API REST.
    - Le script affiche la réponse du chatbot ou un message d'erreur en cas de problème.
 
 5. **Exemples d'exécution** :
-   - Simple : `python script.py "mon nom est Vinh"`
-   - Personnalisé : `python script.py "Bonjour" --agent_id "custom-agent" --session_id "session123" --url "http://mon-api"`
+   - Simple : `python MyBoun_chat.py "mon nom est Vinh"`
+   - Personnalisé : `python MyBoun_chat.py "Bonjour" --agent_id "custom-agent" --session_id "session123" --url "http://mon-api"`
 
 6. **Cas d'erreur** :
    - Si l'API retourne une erreur HTTP, le script affichera un message décrivant l'erreur.
