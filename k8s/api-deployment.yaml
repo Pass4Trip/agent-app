@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agent-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agent-api
+  template:
+    metadata:
+      labels:
+        app: agent-api
+    spec:
+      containers:
+      - name: api
+        image: localhost:32000/agent-app:latest
+        command: ["uvicorn"]
+        args: ["api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+        ports:
+        - containerPort: 8000
+        env:
+        - name: RUNTIME_ENV
+          value: "dev"
+        - name: DB_HOST
+          value: "agent-db"
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: agent-secrets
+              key: DB_USER
+        - name: DB_PASS
+          valueFrom:
+            secretKeyRef:
+              name: agent-secrets
+              key: DB_PASSWORD
+        - name: DB_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: agent-secrets
+              key: DB_DATABASE
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: agent-secrets
+              key: OPENAI_API_KEY
+        - name: PHI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: agent-secrets
+              key: PHI_API_KEY
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: agent-api
+spec:
+  selector:
+    app: agent-api
+  ports:
+  - port: 8000
+    targetPort: 8000
+  type: ClusterIP

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: agent-db-external
+  annotations:
+    # Ajout d'annotations pour la sécurité
+    prometheus.io/scrape: "false"
+spec:
+  type: NodePort
+  ports:
+    - port: 5432
+      targetPort: 5432
+      nodePort: 30432  # Port externe fixe
+      protocol: TCP
+      name: postgresql
+  selector:
+    app: agent-db

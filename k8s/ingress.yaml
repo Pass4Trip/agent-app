@@ -1,0 +1,73 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: agent-ingress
+  annotations:
+    # Annotations spécifiques à microk8s
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-body-size: "50m"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-http-version: "1.1"
+    nginx.ingress.kubernetes.io/proxy-buffering: "off"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+    nginx.ingress.kubernetes.io/websocket-services: "agent-app"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: public
+  rules:
+  - host: vps-af24e24d.vps.ovh.net  # Utilisez votre nom de domaine VPS OVH
+    http:
+      paths:
+      - path: /v1(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: agent-api
+            port:
+              number: 8000
+      - path: /api(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: agent-api
+            port:
+              number: 8000
+      - path: /docs(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: agent-api
+            port:
+              number: 8000
+      - path: /openapi.json
+        pathType: Exact
+        backend:
+          service:
+            name: agent-api
+            port:
+              number: 8000
+      - path: /stream(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: agent-app
+            port:
+              number: 8501
+      - path: /static(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: agent-app
+            port:
+              number: 8501
+      - path: /(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: agent-app
+            port:
+              number: 8501
