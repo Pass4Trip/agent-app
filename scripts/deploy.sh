@@ -15,9 +15,13 @@ NC='\033[0m'
 
 echo -e "${YELLOW}🚀 Déploiement de l'API...${NC}"
 
+# Nettoyer les images locales
+echo -e "${YELLOW}🧹 Nettoyage des images locales...${NC}"
+docker rmi -f agent-api ${VPS_IP}:${REGISTRY_PORT}/agent-api 2>/dev/null || true
+
 # Build de l'image pour linux/amd64
 echo -e "${YELLOW}🔨 Build de l'image Docker...${NC}"
-docker build --platform linux/amd64 -t agent-api ${LOCAL_PATH}
+docker build --no-cache --platform linux/amd64 -t agent-api ${LOCAL_PATH}
 
 # Tag de l'image pour le registry local
 echo -e "${YELLOW}🏷️  Tag de l'image...${NC}"
@@ -27,10 +31,46 @@ docker tag agent-api ${VPS_IP}:${REGISTRY_PORT}/agent-api
 echo -e "${YELLOW}📤 Push de l'image vers le registry...${NC}"
 docker push ${VPS_IP}:${REGISTRY_PORT}/agent-api
 
+# Nettoyer et préparer le VPS
+echo -e "${YELLOW}🧹 Préparation du VPS...${NC}"
+ssh -v ${VPS_USER}@${VPS_HOST} "
+    set -x  # Mode debug pour afficher chaque commande
+    
+    echo '🔍 Vérification des images existantes'
+    microk8s ctr image ls | grep ${VPS_IP}:${REGISTRY_PORT}/agent-api || echo 'Aucune image trouvée'
+    
+    echo '🗑️ Tentative de suppression des anciennes images'
+    microk8s ctr image rm ${VPS_IP}:${REGISTRY_PORT}/agent-api 2>&1 || echo 'Aucune image à supprimer'
+    
+    echo '📥 Vérification de la connectivité docker'
+    docker info 2>&1
+    
+    echo '📦 Tentative de pull de l\'image'
+    docker pull ${VPS_IP}:${REGISTRY_PORT}/agent-api 2>&1
+    PULL_STATUS=$?
+    
+    echo '🔬 Statut du pull : $PULL_STATUS'
+    if [ $PULL_STATUS -eq 0 ]; then
+        echo '🚢 Import de l\'image dans microk8s'
+        docker save ${VPS_IP}:${REGISTRY_PORT}/agent-api | microk8s ctr image import - 2>&1
+        IMPORT_STATUS=$?
+        echo '🔬 Statut de l\'import : $IMPORT_STATUS'
+        
+        echo '📋 Vérification des images importées'
+        microk8s ctr image ls | grep ${VPS_IP}:${REGISTRY_PORT}/agent-api
+    else
+        echo '❌ Échec du pull de l\'image'
+        exit 1
+    fi
+" 2>&1 | tee /tmp/vps_deploy.log
+
 # Redéploiement du pod api
 echo -e "${YELLOW}🔄 Redéploiement de l'API...${NC}"
-if ssh ${VPS_USER}@${VPS_HOST} "microk8s kubectl rollout restart deployment agent-api && \
-    microk8s kubectl rollout status deployment agent-api"; then
+if ssh ${VPS_USER}@${VPS_HOST} "
+    # Forcer le redéploiement
+    microk8s kubectl rollout restart deployment agent-api
+    microk8s kubectl rollout status deployment agent-api
+"; then
     
     # Vérification détaillée du pod
     echo -e "${YELLOW}🔍 Vérification du pod déployé...${NC}"
