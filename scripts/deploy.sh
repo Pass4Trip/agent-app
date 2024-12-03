@@ -32,22 +32,38 @@ echo -e "${YELLOW}🔄 Redéploiement de l'API...${NC}"
 if ssh ${VPS_USER}@${VPS_HOST} "microk8s kubectl rollout restart deployment agent-api && \
     microk8s kubectl rollout status deployment agent-api"; then
     
+    # Vérification détaillée du pod
+    echo -e "${YELLOW}🔍 Vérification du pod déployé...${NC}"
+    
+    # Récupérer les détails du pod
+    POD_INFO=$(ssh ${VPS_USER}@${VPS_HOST} "microk8s kubectl get pods -l app=agent-api -o=jsonpath='{.items[0].metadata.name} {.items[0].status.containerStatuses[0].imageID} {.items[0].status.containerStatuses[0].image} {.items[0].metadata.creationTimestamp}'")
+    
+    echo -e "${YELLOW}Détails du pod :${NC}"
+    echo "$POD_INFO" | awk '{print "Nom du pod: " $1 "\nImage ID: " $2 "\nImage: " $3 "\nDate de création: " $4}'
+    
     # Si le déploiement est réussi, commit et push
     echo -e "${YELLOW}📦 Sauvegarde des changements sur Git...${NC}"
     read -p "Message de commit: " COMMIT_MSG
     if [ ! -z "$COMMIT_MSG" ]; then
         git add .
         git commit -m "$COMMIT_MSG"
-        git push
+        
+        # Vérification du statut Git avant push
+        echo -e "${YELLOW}🔍 Vérification du statut Git...${NC}"
+        git status
+        
+        # Push avec affichage détaillé
+        echo -e "${YELLOW}📤 Envoi sur GitHub...${NC}"
+        git push -v origin feature/clean-start
+        
         echo -e "${GREEN}✅ Changements sauvegardés sur Git${NC}"
     else
         echo -e "${YELLOW}⚠️  Pas de commit Git (message vide)${NC}"
     fi
     
-    # Vérifier la version déployée
-    echo -e "${YELLOW}📋 Vérification de la version déployée...${NC}"
-    sleep 5  # Attendre que le pod soit prêt
-    ssh ${VPS_USER}@${VPS_HOST} "microk8s kubectl logs -f deployment/agent-api --tail=20 | grep 'Initializing Example Agent'"
+    # Vérifier la version déployée avec plus de détails
+    echo -e "${YELLOW}📋 Logs du pod :${NC}"
+    ssh ${VPS_USER}@${VPS_HOST} "microk8s kubectl logs deployment/agent-api --tail=20"
     
     echo -e "${GREEN}✅ Déploiement terminé avec succès${NC}"
 else
