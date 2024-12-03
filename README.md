@@ -17,6 +17,41 @@ Ce script va :
 4. Rebuilder l'image Docker
 5. Redéployer l'application sur Microk8s
 
+## Déploiement Kubernetes
+
+### Configuration du Déploiement
+
+- **Image Docker** : `agent-app`
+- **Registry** : `localhost:32000/agent-app:latest`
+- **Déploiement Kubernetes** : `agent-api`
+
+### Script de Déploiement
+
+Le script `deploy.sh` gère le processus de déploiement :
+1. Construction de l'image Docker
+2. Taggage de l'image pour le registry local
+3. Push de l'image vers le registry
+4. Mise à jour du déploiement Kubernetes
+
+### Commandes Principales
+
+```bash
+# Déployer l'application
+./scripts/deploy.sh
+
+# Options supplémentaires
+./scripts/deploy.sh --git  # Met à jour le dépôt Git avant le déploiement
+```
+
+### Notes Importantes
+
+- Les logs de déploiement sont temporairement désactivés
+- Vérifiez manuellement le statut du déploiement si nécessaire avec :
+  ```bash
+  microk8s kubectl get pods
+  microk8s kubectl logs deployment/agent-api
+  ```
+
 ## 1. Construction et Push des Images Docker
 
 Après modification du code sur votre Mac, reconstruire et pousser les images :

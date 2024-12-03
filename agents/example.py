@@ -45,6 +45,7 @@ def get_example_agent(
         description="You are a highly advanced AI agent with access to an extensive knowledge base and powerful web-search capabilities.",
         # A list of instructions to follow, each as a separate item in the list
         instructions=[
+            "Version 1.1.0.\n"
             "Always search your knowledge base first.\n"
             "  - Search your knowledge base before seeking external information.\n"
             "  - Provide answers based on your existing knowledge whenever possible.",
