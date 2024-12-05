@@ -27,7 +27,7 @@ Ce script va :
 
 ### Script de Déploiement
 
-Le script `deploy.sh` gère le processus de déploiement :
+Le script `deploy.sh` gère le processus de déploiement de agent-api sur Microk8s :
 1. Construction de l'image Docker
 2. Taggage de l'image pour le registry local
 3. Push de l'image vers le registry
@@ -56,21 +56,23 @@ Le script `deploy.sh` gère le processus de déploiement :
 
 Après modification du code sur votre Mac, reconstruire et pousser les images :
 
-### Pour agent-app
+### Pour agent-db
 ```bash
 # Sur votre Mac
 cd /Users/vinh/Documents/agent-app
-docker build --platform linux/amd64 -t agent-app .
-docker tag agent-app 51.77.200.196:32000/agent-app
-docker push 51.77.200.196:32000/agent-app
+docker build --platform linux/amd64 -t agent-db .
+docker tag agent-db 51.77.200.196:32000/agent-db
+docker push 51.77.200.196:32000/agent-db
 ```
+
+
 
 ### Pour agent-api
 ```bash
 # Sur votre Mac
 cd /Users/vinh/Documents/agent-app
-docker build --platform linux/amd64 -t agent-api .
-docker tag agent-api 51.77.200.196:32000/agent-api
+docker build --platform linux/amd64 -t agent-app .
+docker tag agent-api 51.77.200.196:32000/agent-app
 docker push 51.77.200.196:32000/agent-api
 ```
 
@@ -81,7 +83,7 @@ Les fichiers de configuration se trouvent dans le dossier `/home/ubuntu/phidata_
 - `secrets.yaml` : Variables d'environnement sensibles
 - `db-deployment.yaml` : Déploiement PostgreSQL
 - `api-deployment.yaml` : Déploiement FastAPI
-- `app-deployment.yaml` : Déploiement Streamlit
+- `app-deployment.yaml` : Déploiement Streamlit A DELETE !!
 - `ingress.yaml` : Configuration de l'accès externe
 - `db-service.yaml` : Service NodePort pour accès PostgreSQL
 
@@ -96,17 +98,15 @@ microk8s kubectl apply -f secrets.yaml
 microk8s kubectl apply -f db-deployment.yaml
 microk8s kubectl apply -f db-service.yaml
 microk8s kubectl apply -f api-deployment.yaml
-microk8s kubectl apply -f app-deployment.yaml
 microk8s kubectl apply -f ingress.yaml
+microk8s kubectl apply -f app-deployment.yaml # A supprimer si Streamlit non utilisé
 ```
 
 ## 3. Accès aux Services
 
 ### Application Web
-- Interface Streamlit : http://vps-af24e24d.vps.ovh.net/
 - API FastAPI : http://vps-af24e24d.vps.ovh.net/api/
 - Documentation API (Swagger) : http://vps-af24e24d.vps.ovh.net/docs/
-- OpenAPI JSON : http://vps-af24e24d.vps.ovh.net/openapi.json
 
 ### Base de Données PostgreSQL
 Configuration DBeaver :
@@ -131,10 +131,6 @@ microk8s kubectl get ingress
 ```
 
 ### Consulter les logs
-```bash
-# Logs de l'application Streamlit
-microk8s kubectl logs -f deployment/agent-app
-
 # Logs de l'API
 microk8s kubectl logs -f deployment/agent-api
 
@@ -143,10 +139,6 @@ microk8s kubectl logs -f deployment/agent-db
 ```
 
 ### Redémarrer les services
-```bash
-# Redémarrer l'application Streamlit
-microk8s kubectl rollout restart deployment agent-app
-
 # Redémarrer l'API
 microk8s kubectl rollout restart deployment agent-api
 

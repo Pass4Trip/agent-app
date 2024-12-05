@@ -21,7 +21,7 @@ from phi.tools.streamlit.components import (
 )
 from phi.utils.log import logger
 
-from agents.example import get_example_agent
+from agents.agent_leader import get_agent_leader
 
 nest_asyncio.apply()
 st.set_page_config(
@@ -34,8 +34,8 @@ st.markdown("##### :orange_heart: built using [phidata](https://github.com/phida
 
 def restart_agent():
     logger.debug("---*--- Restarting Agent ---*---")
-    st.session_state["example_agent"] = None
-    st.session_state["example_agent_session_id"] = None
+    st.session_state["agent_leader"] = None
+    st.session_state["agent_leader_session_id"] = None
     st.session_state["uploaded_image"] = None
     if "url_scrape_key" in st.session_state:
         st.session_state["url_scrape_key"] += 1
@@ -79,16 +79,16 @@ def main() -> None:
 
     # Get the Agent
     example_agent: Agent
-    if "example_agent" not in st.session_state or st.session_state["example_agent"] is None:
+    if "agent_leader" not in st.session_state or st.session_state["agent_leader"] is None:
         logger.info(f"---*--- Creating {model_id} Agent ---*---")
-        example_agent = get_example_agent(model_id=model_id, debug_mode=True)
-        st.session_state["example_agent"] = example_agent
+        agent_leader = get_agent_leader(model_id=model_id, debug_mode=True)
+        st.session_state["agent_leader"] = agent_leader
     else:
-        example_agent = st.session_state["example_agent"]
+        agent_leader = st.session_state["agent_leader"]
 
     # Create Agent session (i.e. log to database) and save session_id in session state
     try:
-        st.session_state["example_agent_session_id"] = example_agent.create_session()
+        st.session_state["agent_leader_session_id"] = agent_leader.create_session()
     except Exception:
         st.warning("Could not create Agent session, is the database running?")
         return
@@ -99,7 +99,7 @@ def main() -> None:
         uploaded_image = st.session_state["uploaded_image"]
 
     # Load existing messages
-    agent_chat_history = example_agent.memory.get_messages()
+    agent_chat_history = agent_leader.memory.get_messages()
     if len(agent_chat_history) > 0:
         logger.debug("Loading chat history")
         st.session_state["messages"] = agent_chat_history
@@ -170,7 +170,7 @@ def main() -> None:
             with st.spinner("Thinking..."):
                 resp_container = st.empty()
                 response = ""
-                for delta in example_agent.run(
+                for delta in agent_leader.run(
                     message=question, images=[uploaded_image] if uploaded_image else [], stream=True
                 ):
                     response += delta.content  # type: ignore
@@ -178,7 +178,7 @@ def main() -> None:
             st.session_state["messages"].append({"role": "assistant", "content": response})
 
     # Load knowledge base
-    if example_agent.knowledge:
+    if agent_leader.knowledge:
         # -*- Add websites to knowledge base
         if "url_scrape_key" not in st.session_state:
             st.session_state["url_scrape_key"] = 0
@@ -193,7 +193,7 @@ def main() -> None:
                     scraper = WebsiteReader(max_links=2, max_depth=1)
                     web_documents: List[Document] = scraper.read(input_url)
                     if web_documents:
-                        example_agent.knowledge.load_documents(web_documents, upsert=True)
+                        agent_leader.knowledge.load_documents(web_documents, upsert=True)
                     else:
                         st.sidebar.error("Could not read website")
                     st.session_state[f"{input_url}_uploaded"] = True
@@ -223,26 +223,26 @@ def main() -> None:
                     reader = DocxReader()
                 auto_rag_documents: List[Document] = reader.read(uploaded_file)
                 if auto_rag_documents:
-                    example_agent.knowledge.load_documents(auto_rag_documents, upsert=True)
+                    agent_leader.knowledge.load_documents(auto_rag_documents, upsert=True)
                 else:
                     st.sidebar.error("Could not read document")
                 st.session_state[f"{document_name}_uploaded"] = True
             alert.empty()
 
-        if example_agent.knowledge.vector_db:
+        if agent_leader.knowledge.vector_db:
             if st.sidebar.button("Delete Knowledge Base"):
-                example_agent.knowledge.vector_db.delete()
+                agent_leader.knowledge.vector_db.delete()
                 st.sidebar.success("Knowledge base deleted")
 
-    if example_agent.storage:
-        example_agent_session_ids: List[str] = example_agent.storage.get_all_session_ids()
-        new_example_agent_session_id = st.sidebar.selectbox("Session ID", options=example_agent_session_ids)
-        if st.session_state["example_agent_session_id"] != new_example_agent_session_id:
-            logger.info(f"---*--- Loading {model_id} session: {new_example_agent_session_id} ---*---")
-            st.session_state["example_agent"] = get_example_agent(
-                model_id=model_id, session_id=new_example_agent_session_id, debug_mode=True
+    if agent_leader.storage:
+        agent_leader_session_ids: List[str] = agent_leader.storage.get_all_session_ids()
+        new_agent_leader_session_id = st.sidebar.selectbox("Session ID", options=agent_leader_session_ids)
+        if st.session_state["agent_leader_session_id"] != new_agent_leader_session_id:
+            logger.info(f"---*--- Loading {model_id} session: {new_agent_leader_session_id} ---*---")
+            st.session_state["agent_leader"] = get_agent_leader(
+                model_id=model_id, session_id=new_agent_leader_session_id, debug_mode=True
             )
-            st.session_state["example_agent_session_id"] = new_example_agent_session_id
+            st.session_state["agent_leader_session_id"] = new_agent_leader_session_id
             st.session_state["uploaded_image"] = None
             st.rerun()
 
